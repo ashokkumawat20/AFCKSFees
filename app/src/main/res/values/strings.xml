@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">AFCKS Fees</string>
+    <string name="prompt">Fee Mode...</string>
+
+    <string name="youAreNotUpdatedTitle">Update Available</string>
+    <string name="youAreNotUpdatedMessage">A new version of AFCKS Fees is available. Please update to version\s</string>
+    <string name="youAreNotUpdatedMessage1">\s now</string>
+    <string name="update">Update</string>
+
+    <string name="description_refresh">Refresh</string>
+    <string name="mailids_refresh">Get Students Mail Ids</string>
+    <string name="temp">Template</string>
+</resources>

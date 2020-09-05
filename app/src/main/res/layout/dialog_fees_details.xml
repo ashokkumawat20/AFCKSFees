@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+
+    <LinearLayout
+        android:id="@+id/orderedMenu1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/title_font"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/dailog_backgrnd">
+
+            <LinearLayout
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:id="@+id/clickForModifydate"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".8"
+                        android:orientation="vertical"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/titleTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight=".5"
+
+                            android:text="das"
+                            android:textColor="#ffffff"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/titleDateTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight=".5"
+
+                            android:text="das"
+                            android:textColor="#ffffff"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/closeFeesDetails"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight=".2"
+                        android:gravity="center_vertical"
+                        android:src="@drawable/ic_clear_black_24dp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#ffffff" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/nextDueAmount"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/title"
+                android:background="#E0DADA"
+                android:gravity="center"
+                android:hint="*Enter Amount"
+                android:inputType="number"
+                android:padding="5dp"
+                android:textColor="@color/textcolor"
+                android:textColorHint="@color/color_faintgray"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/nextDueDateDate"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/nextDueAmount"
+                android:layout_marginTop="3dp"
+                android:background="#E0DADA"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="*Next Due Date"
+                android:padding="5dp"
+                android:textColor="@color/textcolor"
+                android:textColorHint="@color/color_faintgray"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/updateDueDate"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/nextDueDateDate"
+                android:text="Update"
+                android:textAllCaps="false"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/feesDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/feesdetailsList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:clipToPadding="false"
+                    android:paddingTop="8dp"
+
+                    />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

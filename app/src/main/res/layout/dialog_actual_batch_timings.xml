@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/orderedMenu1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/title_font"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/dailog_backgrnd">
+
+                <LinearLayout
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/titleTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Class details!!"
+                        android:textColor="#ffffff" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:background="#ffffff" />
+                </LinearLayout>
+
+                <ScrollView
+                    android:id="@+id/regScroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title">
+
+                    <LinearLayout
+                        android:id="@+id/batchData"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <EditText
+                                android:id="@+id/datePickerClassDate"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_marginBottom="2dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight=".9"
+                                android:background="#E0DADA"
+                                android:drawablePadding="5dp"
+                                android:focusable="false"
+                                android:hint="Select class Date"
+                                android:inputType="textCapSentences"
+                                android:paddingLeft="6dp"
+                                android:singleLine="true"
+                                android:textColor="@color/textcolor"
+                                android:textColorHint="@color/color_faintgray"
+                                android:textSize="20sp" />
+
+                            <ImageView
+                                android:id="@+id/clearDate"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="2dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight=".1"
+                                android:background="#E0DADA"
+                                android:src="@drawable/ic_clear_black_24dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <EditText
+                                android:id="@+id/cstimingsEdtTxt"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_marginBottom="2dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight=".9"
+                                android:background="#E0DADA"
+                                android:focusable="false"
+                                android:hint="Start class time"
+                                android:padding="5dp"
+                                android:textColor="@color/textcolor"
+                                android:textColorHint="@color/color_faintgray"
+
+                                android:textSize="20sp" />
+
+                            <ImageView
+                                android:id="@+id/clearStarttime"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_marginBottom="2dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight=".1"
+                                android:background="#E0DADA"
+
+
+                                android:src="@drawable/ic_clear_black_24dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <EditText
+                                android:id="@+id/cetimingsEdtTxt"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_marginBottom="2dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight=".9"
+                                android:background="#E0DADA"
+                                android:focusable="false"
+                                android:hint="End class time"
+                                android:padding="5dp"
+                                android:textColor="@color/textcolor"
+                                android:textColorHint="@color/color_faintgray"
+                                android:textSize="20sp" />
+
+                            <ImageView
+                                android:id="@+id/clearEndtime"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_marginBottom="2dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight=".1"
+                                android:background="#E0DADA"
+                                android:src="@drawable/ic_clear_black_24dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/nextClassLay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <EditText
+                                android:id="@+id/datePickerNextClassDate"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_marginBottom="2dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight=".9"
+                                android:background="#E0DADA"
+                                android:drawablePadding="5dp"
+                                android:focusable="false"
+                                android:hint="*Select next class Date"
+                                android:inputType="textCapSentences"
+                                android:paddingLeft="6dp"
+                                android:singleLine="true"
+                                android:textColor="@color/textcolor"
+                                android:textColorHint="@color/color_faintgray"
+                                android:textSize="20sp" />
+
+                            <ImageView
+                                android:id="@+id/clearNextClassDate"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="2dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight=".1"
+                                android:background="#E0DADA"
+                                android:src="@drawable/ic_clear_black_24dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginRight="13dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_weight=".3"
+                                android:focusable="false"
+                                android:gravity="center"
+                                android:paddingLeft="10dp"
+                                android:text="JD SMS"
+                                android:visibility="gone"
+                                android:textColor="@color/white"
+
+                                android:textStyle="bold" />
+
+                            <CheckBox
+                                android:id="@+id/chkJDSelected"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:layout_weight=".2"
+                                android:visibility="gone"
+                                android:button="@drawable/custom_checkbox_design"
+                                android:gravity="center" />
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_weight=".9"
+                                android:focusable="false"
+                                android:gravity="center"
+                                android:paddingLeft="10dp"
+                                android:text="Batch End"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                            <CheckBox
+                                android:id="@+id/chkSelected"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:layout_weight=".1"
+                                android:button="@drawable/custom_checkbox_design"
+                                android:gravity="center" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/regScroll"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp"
+                    android:textColor="@color/titlemenu"
+                    android:weightSum=".5">
+
+                    <Button
+                        android:id="@+id/saveBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight=".5"
+                        android:background="#556199"
+                        android:text="Submit"
+                        android:textAllCaps="false"
+                        android:textColor="@color/back_c"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

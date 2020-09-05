@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
+    android:descendantFocusability="beforeDescendants"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp">
+
+    <LinearLayout
+        android:id="@+id/layout_quotation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/card_background_selector"
+        android:descendantFocusability="afterDescendants"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layoutBackChange"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#556199"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/clickForShowBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <CheckBox
+                    android:id="@+id/chkSelected"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight=".1"
+                    android:button="@drawable/custom_checkbox_design"
+                    android:checked="true"
+
+                    />
+
+                <ImageView
+                    android:id="@+id/normalButton"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_weight=".1"
+                    android:src="@drawable/noncorporate"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/noncorporateButton"
+                    android:layout_width="0dp"
+                    android:layout_height="23dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight=".1"
+                    android:src="@drawable/non_corporate" />
+
+
+                <ImageView
+                    android:id="@+id/nonClickButton"
+                    android:layout_width="0dp"
+                    android:layout_height="23dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight=".1"
+                    android:src="@drawable/non_corporate"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/corporateButton"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight=".1"
+                    android:src="@drawable/corporate"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/mos"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight=".1"
+                    android:src="@drawable/mos_icon"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/moscorporate"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight=".1"
+                    android:src="@drawable/corporatemos"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/numbers"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1"
+                    android:background="@android:color/transparent"
+                    android:gravity="left|center"
+                    android:text="001"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight=".5"
+                    android:gravity="left|center"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="4dp"
+                    android:text="Ashok Kumawat"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/messageCount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="16sp"
+                    android:textColor="@color/back_c"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/hidemessageCount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/back_c"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/takeEditNotes"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight=".1"
+                    android:padding="3dp"
+                    android:src="@drawable/folder_access_icon" />
+
+                <ImageView
+                    android:id="@+id/takeEditNotNotes"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight=".1"
+                    android:padding="3dp"
+                    android:src="@drawable/folder_not_access_icon"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/middleHide"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/totalFees"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight=".2"
+                    android:paddingLeft="3dp"
+                    android:text=""
+                    android:textColor="@color/color_black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/dueDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight=".3"
+                    android:paddingLeft="3dp"
+                    android:textColor="#31B946"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/guestFees"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight=".2"
+                    android:paddingLeft="3dp"
+                    android:text="0"
+                    android:textColor="#31B946"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/previousAttendance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight=".3"
+                    android:paddingLeft="3dp"
+                    android:text="P A P P A P"
+                    android:textColor="@color/color_black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/takeNotViewInfo"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight=".1"
+                    android:padding="3dp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/takeViewInfo"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight=".1"
+                    android:padding="3dp"
+                    android:src="@drawable/i_icon" />
+
+                <ImageView
+                    android:id="@+id/takeComment"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight=".1"
+                    android:padding="3dp"
+                    android:src="@drawable/c_icon" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/notes1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="1">
+
+
+                <TextView
+                    android:id="@+id/notes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:paddingLeft="5dp"
+                    android:text="Todayswdewdffsfdfdssfdsfdsfdsfdsfdsfdsfdsfdsfdfdfsdfdsf"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lbtn1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#556199"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="5">
+
+                <ImageView
+                    android:id="@+id/callingButton"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    android:src="@drawable/call_icon" />
+
+                <ImageView
+                    android:id="@+id/messageButton"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/msg_icon"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/feesButton"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/fees"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/whatsappeButton"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/whatsaap_img" />
+
+                <ImageView
+                    android:id="@+id/locationButton"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+
+                    android:src="@drawable/location" />
+
+                <ImageView
+                    android:id="@+id/coursesButton"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/open_book" />
+
+                <ImageView
+                    android:id="@+id/transferStudents"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/transfer_st" />
+                <ImageView
+                    android:id="@+id/addButton"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="1dp"
+                    android:visibility="gone"
+                    android:src="@drawable/add_user_icon" />
+                <ImageView
+                    android:id="@+id/notTransferStudents"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/not_transfer_st"
+                    android:visibility="gone" />
+                <ImageView
+                    android:id="@+id/takeDeleteStudent"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/dustbean"
+                    android:visibility="gone" />
+                <ImageView
+                    android:id="@+id/takeViewDustbean"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/dustbean"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/takeViewContinue"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/user_continue"
+                    android:visibility="gone" />
+                <ImageView
+                    android:id="@+id/takeViewInfo1"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/i_icon" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</FrameLayout>
+
+
+

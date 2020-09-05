@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="beforeDescendants">
+
+    <LinearLayout
+        android:id="@+id/lead_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/card_background_selector"
+        android:descendantFocusability="afterDescendants"
+        android:orientation="vertical"
+        android:paddingBottom="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#556199"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageView
+                android:id="@+id/sendingSms"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:src="@drawable/msg_icon"
+                android:layout_weight=".2" />
+            <ImageView
+                android:id="@+id/sentSms"
+                android:visibility="gone"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:src="@drawable/msg_sent_icon"
+                android:layout_weight=".2" />
+
+            <TextView
+                android:id="@+id/view_company_q"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1.6"
+                android:gravity="left|center"
+                android:paddingLeft="3dp"
+                android:text="Code"
+                android:textColor="@color/back_c"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/chkSelected"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:layout_weight=".2"
+                android:button="@drawable/custom_checkbox_design"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/view_Address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:background="@android:color/transparent"
+                android:text="AFCKS TECHNOLOGIES
+G25, 26, Shantikunj Building,
+(Opp to GPO, Besides Nucleus Mall, 500 Mtrs from Railway Station on Sadhu Vasvani Road)
+4 Sadhu Vasvani Road.
+Pune 01"
+                android:textColor="#666A6D"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</FrameLayout>
